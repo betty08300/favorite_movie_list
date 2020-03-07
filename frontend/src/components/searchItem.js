@@ -1,6 +1,8 @@
 import React from 'react';
 
 const SearchItem = ({movie}) => {
+  if (movie === null) return null; 
+  
   return(
     <div>
      {movie &&

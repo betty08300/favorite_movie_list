@@ -5,7 +5,7 @@ import Search from './components/search';
 
 function App() {
   const [favoriteMovies, setFavoriteMovies] = useState([]);
-  const [movie, setMovie] = useState({});
+  const [movie, setMovie] = useState(null);
 
   const fetchFavoriteMovies = async() => {
     const res = await fetch('/favorite', {
