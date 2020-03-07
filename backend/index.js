@@ -38,12 +38,8 @@ app.post('/favorite', async(req, res) => {
 
 app.delete('/favorite/:movieId', async(req, res) => {
   console.log(req.body);
-  // const deleted = req.body.remove; 
-  // const data = {title: deleted.Title, year: deleted.Year, genre: deleted.Genre, plot: deleted.Plot };
   const remove = await Movie.findByIdAndDelete(req.params.movieId);
-  // const remove = await Movie.deleteOne();
   res.status(200).json({message: 'deleted successful', remove})
-
 })
 
 
