@@ -11,7 +11,7 @@ const movieSchema = new Schema({
   
 });
 
-movieSchema.statics.searchName = async function(title) {
+movieSchema.statics.searchTitle = async function(title) {
   const url = `http://www.omdbapi.com/?apikey=5ffac00c&t=${title}`;
   const resp = await fetch(url);
 

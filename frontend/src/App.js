@@ -15,7 +15,7 @@ function App() {
         },
     })
     const data = await res.json();
-    setFavoriteMovies(data.favorites); 
+    setFavoriteMovies(data.favorite); 
   }
 
   return (

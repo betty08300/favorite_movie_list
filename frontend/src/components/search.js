@@ -5,8 +5,7 @@ const Search = ({fetchFavoriteMovies, movie, setMovie}) => {
 
  
   const [searchInput, setSearchInput ] = useState('');
-  //const [movie, setMovie] = useState({});
-
+ 
   const handleChange = (e) => {
     setSearchInput(e.target.value); 
   }
@@ -42,8 +41,6 @@ const Search = ({fetchFavoriteMovies, movie, setMovie}) => {
     
     const favoriteMovies = favoriteMovie.findAllMovies;
     await fetchFavoriteMovies(favoriteMovies); 
-
-    
   }
 
 

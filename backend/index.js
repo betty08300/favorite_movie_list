@@ -16,8 +16,8 @@ app.get('/', function (req, res) {
 
 
 app.get('/favorite', async(req, res) => {
-  const favorites = await Movie.find();
-  res.status(200).json({message: 'good', favorites})
+  const favorite = await Movie.find();
+  res.status(200).json({message: 'good', favorite})
 
 })
 
@@ -47,7 +47,7 @@ app.delete('/favorite/:movieId', async(req, res) => {
 app.post('/search', async(req, res) => {
     const title = req.body.searchInput;
   try {
-    const movie = await Movie.searchName(title);
+    const movie = await Movie.searchTitle(title);
     res.status(200).json(movie);
   } catch (error){
       res.status(400).json({message: error.message})
